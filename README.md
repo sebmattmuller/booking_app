@@ -7,3 +7,4 @@ Repo for Bookings and Reservations Application API project.
 - Uses [Alex Edwards SCS session management V2](https://github.com/alexedwards/scs/v2)
 - Uses [nosurf](https://github.com/justinas/nosurf)
 
+`go run cmd/web/*.go` to start application.

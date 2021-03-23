@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-func routes(app *config.AppConfig) http.Handler{
+func routes(app *config.AppConfig) http.Handler {
 	//Pat Router
 	//mux := pat.New()
 	//mux.Get("/", http.HandlerFunc(handlers.Repo.Home))
@@ -21,11 +21,13 @@ func routes(app *config.AppConfig) http.Handler{
 	mux.Use(NoSurf)
 	mux.Use(SessionLoad)
 
-	//Routes
+	// Routes
 	mux.Get("/", handlers.Repo.Home)
 	mux.Get("/about", handlers.Repo.About)
 
+	// Static Files
+	fileServer := http.FileServer(http.Dir("./static-files/"))
+	mux.Handle("/static-files/*", http.StripPrefix("/static-files", fileServer))
+
 	return mux
 }
-
-
