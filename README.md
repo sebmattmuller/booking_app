@@ -8,4 +8,4 @@ Repo for Bookings and Reservations Application API project.
 - Uses [nosurf](https://github.com/justinas/nosurf)
 - Uses [govalidator](https://github.com/asaskevich/govalidator)
 
-`go run cmd/web/*.go` to start application.
+To start application run `chmod +x run.sh` and `./run.sh` which builds and runs build file.
