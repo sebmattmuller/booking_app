@@ -6,12 +6,11 @@ import (
 	"log"
 )
 
-
 //AppConfig holds the application config
 type AppConfig struct {
-	UseCache bool
+	UseCache      bool
 	TemplateCache map[string]*template.Template
-	InfoLog *log.Logger
-	InProduction bool
-	Session *scs.SessionManager
+	InfoLog       *log.Logger
+	InProduction  bool
+	Session       *scs.SessionManager
 }

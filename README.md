@@ -6,5 +6,6 @@ Repo for Bookings and Reservations Application API project.
 - Uses [Chi Router](https://github.com/go-chi/chi)
 - Uses [Alex Edwards SCS session management V2](https://github.com/alexedwards/scs/v2)
 - Uses [nosurf](https://github.com/justinas/nosurf)
+- Uses [govalidator](https://github.com/asaskevich/govalidator)
 
 `go run cmd/web/*.go` to start application.
